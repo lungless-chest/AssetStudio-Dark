@@ -76,10 +76,10 @@
     
     <Target Name="CopyExtraFilesPortable" AfterTargets="AfterBuild" Condition=" '$(RuntimeIdentifier)' == '' OR '$(TargetFramework)' == 'net472' ">
         <Message Text="Copying extra files for $(TargetFramework)... " Importance="high" />
-        <Copy SourceFiles="$(SolutionDir)Texture2DDecoderNative\bin\Win32\$(Configuration)\Texture2DDecoderNative.dll" DestinationFolder="$(TargetDir)runtimes\win-x86\native" ContinueOnError="false" />
-        <Copy SourceFiles="$(SolutionDir)Texture2DDecoderNative\bin\x64\$(Configuration)\Texture2DDecoderNative.dll" DestinationFolder="$(TargetDir)runtimes\win-x64\native" ContinueOnError="false" />
-        <Copy SourceFiles="$(SolutionDir)AssetStudioFBXNative\bin\Win32\$(Configuration)\AssetStudioFBXNative.dll" DestinationFolder="$(TargetDir)runtimes\win-x86\native" ContinueOnError="false" />
-        <Copy SourceFiles="$(SolutionDir)AssetStudioFBXNative\bin\x64\$(Configuration)\AssetStudioFBXNative.dll" DestinationFolder="$(TargetDir)runtimes\win-x64\native" ContinueOnError="false" />
+        <Copy SourceFiles="$(SolutionDir)Texture2DDecoderNative\Texture2DDecoderNative.dll" DestinationFolder="$(TargetDir)runtimes\win-x86\native" ContinueOnError="false" />
+        <Copy SourceFiles="$(SolutionDir)Texture2DDecoderNative\Texture2DDecoderNative.dll" DestinationFolder="$(TargetDir)runtimes\win-x64\native" ContinueOnError="false" />
+        <Copy SourceFiles="$(SolutionDir)AssetStudioFBXNative\AssetStudioFBXNative.dll" DestinationFolder="$(TargetDir)runtimes\win-x86\native" ContinueOnError="false" />
+        <Copy SourceFiles="$(SolutionDir)AssetStudioFBXNative\AssetStudioFBXNative.dll" DestinationFolder="$(TargetDir)runtimes\win-x64\native" ContinueOnError="false" />
         <Copy SourceFiles="$(ProjectDir)Libraries\x86\fmod.dll" DestinationFolder="$(TargetDir)runtimes\win-x86\native" ContinueOnError="false" />
         <Copy SourceFiles="$(ProjectDir)Libraries\x64\fmod.dll" DestinationFolder="$(TargetDir)runtimes\win-x64\native" ContinueOnError="false" />
     </Target>
